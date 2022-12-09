@@ -3,7 +3,10 @@
 body {
     background-color: #201f1f;
     font-family: 'Righteous', cursive;
+}
 
+body::-webkit-scrollbar {
+    display: none;
 }
 
 nav {
@@ -28,20 +31,37 @@ nav li {
 }
 
 #main {
-    margin-left: 2vw;
+    margin-left: 1vw;
 }
 
-#trending {
+.galleryContainer {
     width: 100%;
-    height: 600px;
+    height: 210px;
+    overflow: auto;
+    white-space: nowrap;
 
 }
 
-#trending img {
+#trendingMovies::-webkit-scrollbar {
+    display: none;
+}
+
+
+
+#gallery img {
+    cursor: pointer;
     width: 350px;
-    margin-left: 20px;
+    margin-left: 30px;
+    white-space: nowrap;
+    border-radius: 3%
+}
+
+
+#trendingSeries::-webkit-scrollbar {
+    display: none;
 }
 
 #trendingImg1 {
     margin-left: 500px;
 }
+
