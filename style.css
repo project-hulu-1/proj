@@ -1,5 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+
 body {
     background-color: #201f1f;
+    font-family: 'Righteous', cursive;
+
 }
 
 nav {
@@ -21,4 +25,23 @@ nav li {
 
 .home {
     margin-left: 40px;
+}
+
+#main {
+    margin-left: 2vw;
+}
+
+#trending {
+    width: 100%;
+    height: 600px;
+
+}
+
+#trending img {
+    width: 350px;
+    margin-left: 20px;
+}
+
+#trendingImg1 {
+    margin-left: 500px;
 }

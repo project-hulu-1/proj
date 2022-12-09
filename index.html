@@ -5,9 +5,6 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <script src='https://code.jquery.com/jquery-2.2.4.js'>
-    </script>
     <title>Document</title>
 </head>
 
@@ -16,16 +13,49 @@
 
     <nav>
         <ul>
-            <li><button type="button" id="lgout">logout</button></li>
+           
             <li class="home">HOME</li>
+          
             <li>MY STUFF</li>
-            <li>BROWSE</li>
-            <li>CHRISTOPHER</li>
+            <li id="browse">BROWSE
+                <div id="searching">
+                    <label><b>Enter your search here</b>
+                        <br></br>
+                       <input id="search" type="text" placeholder="search"></input> 
+                    </label>
+                </div>
+            </li>
+           
         </ul>
-        <img src="https://download.logo.wine/logo/Hulu/Hulu-Logo.wine.png" style="width:150px; margin-right: 80px;">
+       <div>
+        <div id="result">
+            <h2 style="color :hsl(158deg 99% 46%)"></h2>
+        </div></div>
+        <img id="hulu" src="https://download.logo.wine/logo/Hulu/Hulu-Logo.wine.png" style="width:150px; margin-right: 80px;">
+        <br></br>
+        <div id="lgout">
+            <img id="user" src="https://upload.wikimedia.org/wikipedia/commons/0/0b/Netflix-avatar.png" style="width: 25px; margin-right: 20px;">
+            <div id="name" style="color: aliceblue;">
+                
+            </div>
+            <button type="button">logout</button>
+        </div>
     </nav>
+    <div id="main">
+        <div id="trending">
+            <h1 style="color :hsl(158deg 99% 46%)"> POPULAR ON HULU</h1>
+
+        </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
     <script src="./main.js"></script>
-    </h1>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        $("#searching").hide()
+        $("#lgout").hide()
+    </script>
+
 </body>
 
 </html>
