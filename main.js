@@ -26,19 +26,30 @@ async function getMovies(url) {
         $("#trendingMovies").append(`<img src =${imgSrc}>`)
     }
 }
-
-async function getSeries(url) {
+async function fetcher(url, f) {
     var data = await fetch(url);
     data = await data.json();
     for (var i = 0; data.results.length > i; i++) {
-        var imgSrc = "https://image.tmdb.org/t/p/original" + data.results[i].backdrop_path
-        $("#trendingSeries").append(`<img class='SerieImg' src =${imgSrc}>  </img`)
+      f(data.results[i])
     }
-
 }
 
+fetcher(trendingUrl('movie'), function(element){
+    var imgSrc = "https://image.tmdb.org/t/p/original" + element.backdrop_path
+    $("#trendingMovies").append(`<img src =${imgSrc}>`)
+})
+fetcher(trendingUrl('movie'), function(element){
+    var imgSrc = "https://image.tmdb.org/t/p/original" + element.backdrop_path
+    $("#trendingSeries").append(`<img class='SerieImg' src =${imgSrc}>  </img`)
+})
 
-getMovies(trendingUrl('movie'))
+
+
+
+
+
+
+
 getSeries(trendingUrl('tv'))
 $("#mute").click(function () {
 
@@ -85,12 +96,12 @@ async function getSearch(query) {
 
 
 }
-$("#search").click(
-    function searchin(event) {
-        event.stopPropagation()
-        console.log()
-        getSearch($("#search").val())
-    })
+    $("#search").click(
+        function searchin(event) {
+            event.stopPropagation()
+            console.log()
+            getSearch($("#search").val())
+        })
 
 
 
