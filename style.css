@@ -3,7 +3,10 @@
 body {
     background-color: #201f1f;
     font-family: 'Righteous', cursive;
+}
 
+body::-webkit-scrollbar {
+    display: none;
 }
 
 nav {
@@ -28,20 +31,43 @@ nav li {
 }
 
 #main {
-    margin-left: 2vw;
+    margin-left: 1vw;
 }
 
-#trending {
+#trendingMovies {
     width: 100%;
-    height: 600px;
+    height: 210px;
+    overflow: auto;
+    white-space: nowrap;
 
 }
+#trendingMovies::-webkit-scrollbar {
+    display: none;
+}
 
-#trending img {
+#trendingMovies img {
     width: 350px;
-    margin-left: 20px;
+    margin-left: 30px;
+    white-space: nowrap
 }
 
-#trendingImg1 {
-    margin-left: 500px;
+
+
+
+#trendingSeries {
+    width: 100%;
+    height: 210px;
+    overflow: auto;
+    white-space: nowrap;
+
 }
+#trendingSeries::-webkit-scrollbar {
+    display: none;
+}
+
+#trendingSeries img {
+    width: 350px;
+    margin-left: 30px;
+    white-space: nowrap
+}
+
