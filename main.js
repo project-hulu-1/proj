@@ -38,7 +38,7 @@ fetcher(trendingUrl('movie'), function(element){
     var imgSrc = "https://image.tmdb.org/t/p/original" + element.backdrop_path
     $("#trendingMovies").append(`<img src =${imgSrc}>`)
 })
-fetcher(trendingUrl('movie'), function(element){
+fetcher(trendingUrl('tv'), function(element){
     var imgSrc = "https://image.tmdb.org/t/p/original" + element.backdrop_path
     $("#trendingSeries").append(`<img class='SerieImg' src =${imgSrc}>  </img`)
 })
