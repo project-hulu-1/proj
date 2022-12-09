@@ -1,6 +1,6 @@
 // https://image.tmdb.org/t/p/original
 
-function trendingUrl(str) {
+function trendingUrl(str){
     return `https://api.themoviedb.org/3/trending/${str}/day?api_key=48586718f1619baec6911ced95941d83`
 }
 
@@ -29,6 +29,10 @@ getSeries(trendingUrl('tv'))
 
 
 
+
+
+
+   
 
 
 
