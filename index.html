@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+
     <title>Document</title>
 </head>
 
@@ -13,9 +15,7 @@
 
     <nav>
         <ul>
-           
             <li class="home">HOME</li>
-          
             <li>MY STUFF</li>
             <li id="browse">BROWSE
                 <div id="searching">
@@ -25,13 +25,8 @@
                     </label>
                 </div>
             </li>
-           
         </ul>
-       <div>
-        <div id="result">
-            <h2 style="color :hsl(158deg 99% 46%)"></h2>
-        </div></div>
-        <img id="hulu" src="https://download.logo.wine/logo/Hulu/Hulu-Logo.wine.png" style="width:150px; margin-right: 80px;">
+        <img id="hulu" src="https://download.logo.wine/logo/Hulu/Hulu-Logo.wine.png" style="width:150px; right: 110px; position: absolute;">
         <br></br>
         <div id="lgout">
             <img id="user" src="https://upload.wikimedia.org/wikipedia/commons/0/0b/Netflix-avatar.png" style="width: 25px; margin-right: 20px;">
@@ -43,18 +38,28 @@
     </nav>
 
     <div id="main">
-        <div style="height: 600px;">
+        <div>
+            <div id="mute" style="height:50px; width: 50px; position: absolute; top:50vh; right: 100px;
+            background-color: antiquewhite; cursor: pointer;
+             border-radius:50% ;box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;">
+                <img id="volume" style="width: 50%; margin-top:25%; margin-left: 25%" src="assets/imgs//mute.svg">
+            </div>
+        </div>
+        <div style="position:absolute; z-index: -2; top:0; left:0;">
+            <video id="thevid" style="height:90vh; width: 100vw; object-fit: cover;" loop autoplay>
+                <source src="/assets/vids/mainVideo.mp4" type="video/mp4">
 
+            </video>
         </div>
 
 
-        <div id="gallery">
+        <div style="margin-top: 600px;" id="gallery">
 
             <h1 style="color :hsl(158deg 99% 46%); margin-left: 26px;"> POPULAR ON HULU </h1>
 
             <div class="galleryContainer" id="trendingMovies">
                 <h2
-                    style="position: absolute; transform: rotate(-90deg); left:-15px; top:840px ;color :hsl(158deg 99% 46%); ">
+                    style="z-index:-1;position: absolute; transform: rotate(-90deg); left:-15px; top:840px ;color :hsl(158deg 99% 46%); ">
                     MOVIES
                 </h2>
 
@@ -63,7 +68,7 @@
 
             <div class="galleryContainer" id="trendingSeries">
                 <h2
-                    style="position: absolute; transform: rotate(-90deg); left:-3px; top:1070px ;color :hsl(158deg 99% 46%); ">
+                    style="z-index:-1;position: absolute; transform: rotate(-90deg); left:-3px; top:1070px ;color :hsl(158deg 99% 46%); ">
                     Series
                 </h2>
             </div>
@@ -75,11 +80,6 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
     <script src="./main.js"></script>
-    <link rel="stylesheet" href="style.css">
-    <script>
-        $("#searching").hide()
-        $("#lgout").hide()
-    </script>
 
 </body>
 
