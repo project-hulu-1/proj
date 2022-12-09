@@ -1,56 +1,40 @@
 // https://image.tmdb.org/t/p/original
-$("#lgout").click(function (){
+$("#lgout").click(function () {
     window.location.replace("hull.html")
 })
-$("#hulu").click(function(){
-    
+$("#hulu").click(function () {
+
     $("#lgout").toggle(1000)
-    
- 
- })
- $("#name").click(function(event){
+
+
+})
+$("#name").click(function (event) {
     event.stopPropagation()
 })
 $("#name").html(JSON.parse(localStorage.getItem('active')))
- $("#lgout").hide()
+$("#lgout").hide()
 
 function trendingUrl(str) {
     return `https://api.themoviedb.org/3/trending/${str}/day?api_key=48586718f1619baec6911ced95941d83`
 }
 
-async function getMovies(url) {
-    var data = await fetch(url);
-    data = await data.json();
-    for (var i = 0; data.results.length > i; i++) {
-        var imgSrc = "https://image.tmdb.org/t/p/original" + data.results[i].backdrop_path
-        $("#trendingMovies").append(`<img src =${imgSrc}>`)
-    }
-}
 async function fetcher(url, f) {
     var data = await fetch(url);
     data = await data.json();
     for (var i = 0; data.results.length > i; i++) {
-      f(data.results[i])
+        f(data.results[i])
     }
 }
 
-fetcher(trendingUrl('movie'), function(element){
+fetcher(trendingUrl('movie'), function (element) {
     var imgSrc = "https://image.tmdb.org/t/p/original" + element.backdrop_path
     $("#trendingMovies").append(`<img src =${imgSrc}>`)
 })
-fetcher(trendingUrl('tv'), function(element){
+fetcher(trendingUrl('tv'), function (element) {
     var imgSrc = "https://image.tmdb.org/t/p/original" + element.backdrop_path
     $("#trendingSeries").append(`<img class='SerieImg' src =${imgSrc}>  </img`)
 })
 
-
-
-
-
-
-
-
-getSeries(trendingUrl('tv'))
 $("#mute").click(function () {
 
 
@@ -96,12 +80,12 @@ async function getSearch(query) {
 
 
 }
-    $("#search").click(
-        function searchin(event) {
-            event.stopPropagation()
-            console.log()
-            getSearch($("#search").val())
-        })
+$("#search").click(
+    function searchin(event) {
+        event.stopPropagation()
+        console.log()
+        getSearch($("#search").val())
+    })
 
 
 
