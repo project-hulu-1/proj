@@ -56,6 +56,12 @@ nav li {
     border-radius: 3%
 }
 
+
 #trendingSeries::-webkit-scrollbar {
     display: none;
 }
+
+#trendingImg1 {
+    margin-left: 500px;
+}
+
