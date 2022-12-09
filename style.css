@@ -56,12 +56,16 @@ nav li {
     border-radius: 3%
 }
 
-
 #trendingSeries::-webkit-scrollbar {
     display: none;
 }
 
-#trendingImg1 {
-    margin-left: 500px;
+.SerieImg {
+    transition: all .2s ease-in-out;
 }
 
+.SerieImg:hover {
+
+    transform: scale(1.3);
+   position: absolute;
+}

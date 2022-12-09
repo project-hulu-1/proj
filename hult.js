@@ -18,7 +18,7 @@ $("#cnt").click(function login(){
  if(x===1){
    
     alert('Hello user')
-    window.location.replace("file:///C:/Users/ous00/Desktop/proj/index.html")
+    window.location.replace("http://127.0.0.1:5500/index.html")
  }
  else{
   
